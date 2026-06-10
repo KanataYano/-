@@ -159,9 +159,14 @@ with tab1:
     fig.add_vline(
         x=pelosi_x,
         line_dash="dash",
-        line_color="orange",
-        annotation_text="ペロシ訪台",
-        annotation_position="top right",
+    )
+
+    fig.add_annotation(
+        x=pelosi_x,
+        y=1,
+        yref="paper",
+        text="ペロシ訪台",
+        showarrow=False
     )
     fig.update_layout(height=420, legend_title="政党")
     st.plotly_chart(fig, use_container_width=True)
